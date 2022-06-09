@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+  sample-dev:
+    container_name: sample-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    ports:
+      - '3001:3000'
